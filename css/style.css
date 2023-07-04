@@ -1,0 +1,48 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../images/persona5-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(pink ,darkred);
+    width: 300px;
+    margin: auto;
+}
+
+.border-style {
+    border-radius: 20px;
+}
+
+button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 3px;
+}
+
+h1, h3 {
+    text-shadow: 0 0 5px  black;
+}
+
+p {
+    font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    text-shadow: 0 0 5px white;
+}
