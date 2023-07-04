@@ -46,3 +46,7 @@ p {
     color: red;
     text-shadow: 0 0 5px white;
 }
+
+#player-el {
+    color: white;
+}

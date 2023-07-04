@@ -1,5 +1,5 @@
 // Get DOM elements
-let mainElement = document.getElementById("message-el")     //To get main message 
+let messageElement = document.getElementById("message-el")     //To get main message 
 let cardsElement = document.getElementById("card-el")     //To get the card element
 let sumElement = document.getElementById("sum-el")       //To get the sum element
 let playerElement = document.getElementById("player-el") //To get the player elemet
@@ -15,9 +15,12 @@ let sum = 0         //For the sum of the card
 isAlive = false     //To tell if the player is playing or not
 hasBlackJack = false//To tell if the player has the black jack
 
+let message = ""
+
 
 // Start the Game
 function startGame() {
+    playerElement.textContent = player.name + ": $" + player.chips
     isAlive = true                  //isAlive will become true because the player is now player
     let firstCard = randomCard()    //Player's First Card
     let secondCard = randomCard()   //Player's Second Card
@@ -34,15 +37,29 @@ function renderGame() {
     }
 
     sumElement.textContent = "Sum: " + sum
+
+    if (sum < 21) {
+        message = "You want to draw more card?"
+    } else if (sum === 21) {
+        message = "You Got Black Jack!"
+        hasBlackJack = true
+    } else {
+        message = "Sorry, you are out of the game"
+        isAlive = false
+    }
+
+    messageElement.textContent = message
 }
 
 // Draw a New Card
 function newCard() {
+    if (hasBlackJack === false && isAlive === true) {
     let getCard = randomCard()
     cards.push(getCard)         //This will add at the last part of cards table
     
     sum += getCard              //This will concatenate and add the new card
     renderGame()                //Then re-render the game with updated sum and card table
+    }
 }
 
 // Generate a Random Card Value
