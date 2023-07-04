@@ -20,7 +20,6 @@ let message = ""
 
 // Start the Game
 function startGame() {
-    playerElement.textContent = player.name + ": $" + player.chips
     isAlive = true                  //isAlive will become true because the player is now player
     let firstCard = randomCard()    //Player's First Card
     let secondCard = randomCard()   //Player's Second Card
@@ -31,6 +30,7 @@ function startGame() {
 
 // Render the Game State
 function renderGame() {
+    playerElement.textContent = player.name + ": $" + player.chips
     cardsElement.textContent = "Card: " 
     for(let i = 0; i < cards.length; i++) {     //This loop makes the code optimal to render...
         cardsElement.textContent += cards[i] + " "    //...the values inside of the cards table
