@@ -62,5 +62,17 @@ p {
 }
 
 #startGame-btn {
-    background: linear-gradient(#FF3342, #FF0012);
+    /* background: linear-gradient(#FF3342, #FF0012); */
+    background-color: #FF0012;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+#startGame-btn:hover {
+    background-color: #ffff00;
+    color: black;
+}
+
+#newCard-btn {
+    background: linear-gradient(#8d967b, #847B96);
 }
