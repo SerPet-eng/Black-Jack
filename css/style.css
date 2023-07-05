@@ -13,7 +13,7 @@ body {
     background-image: url("../images/persona5-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 60px;
+    margin: auto;
     font-family: 'Persona', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
     letter-spacing: 5px;
@@ -59,4 +59,8 @@ p {
 
 #player-el {
     color: white;
+}
+
+#startGame-btn {
+    background: linear-gradient(#FF3342, #FF0012);
 }
