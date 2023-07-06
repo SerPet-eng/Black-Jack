@@ -30,6 +30,7 @@ function startGame() {
 
 // Render the Game State
 function renderGame() {
+    let chipValue = 25
     playerElement.textContent = player.name + ": $" + player.chips
     cardsElement.textContent = "Card: " 
     for(let i = 0; i < cards.length; i++) {     //This loop makes the code optimal to render...
@@ -42,13 +43,17 @@ function renderGame() {
         message = "You want to draw more card?"
     } else if (sum === 21) {
         message = "You Got Black Jack!"
+        player.chips += chipValue 
         hasBlackJack = true
     } else {
         message = "Sorry, you are out of the game"
+        player.chips -= chipValue 
         isAlive = false
     }
 
     messageElement.textContent = message
+
+    console.log(player.chips)
 }
 
 // Draw a New Card
