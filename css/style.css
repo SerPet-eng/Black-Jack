@@ -16,7 +16,7 @@ body {
     margin: auto;
     font-family: 'Persona', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
     color: white;
 }
 
@@ -28,6 +28,7 @@ body {
     text-align: center;
     background: linear-gradient(pink ,darkred);
     width: 300px;
+    height: 600px;
     margin: auto;
 }
 
@@ -47,6 +48,11 @@ button {
 
 h1, h3 {
     text-shadow: 0 0 5px  black;
+    transition: text-shadow 0.3s ease;
+}
+
+h1:hover, h3:hover {
+    text-shadow: 0 0 10px black;
 }
 
 p {
@@ -55,6 +61,13 @@ p {
     font-weight: bold;
     color: red;
     text-shadow: 0 0 5px white;
+    letter-spacing: 5px;
+    width: 200px;
+    transition: text-shadow 0.3s ease;
+}
+
+p:hover {
+    text-shadow: 0 0 10px white;
 }
 
 #player-el {
@@ -74,5 +87,13 @@ p {
 }
 
 #newCard-btn {
-    background: linear-gradient(#8d967b, #847B96);
+    /* background: linear-gradient(#8d967b, #847B96); */
+    background-color: #8d967b;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+#newCard-btn:hover {
+    background-color: #ffff00;
+    color: black;
 }
