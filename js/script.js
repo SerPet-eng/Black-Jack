@@ -31,7 +31,7 @@ function startGame() {
 // Render the Game State
 function renderGame() {
     let chipValue = 25
-    playerElement.textContent = player.name + ": $" + player.chips
+    
     cardsElement.textContent = "Card: " 
     for(let i = 0; i < cards.length; i++) {     //This loop makes the code optimal to render...
         cardsElement.textContent += cards[i] + " "    //...the values inside of the cards table
@@ -45,6 +45,7 @@ function renderGame() {
         message = "You Got Black Jack!"
         player.chips += chipValue 
         hasBlackJack = true
+        isAlive = true
     } else {
         message = "Sorry, you are out of the game"
         player.chips -= chipValue 
@@ -52,6 +53,7 @@ function renderGame() {
     }
 
     messageElement.textContent = message
+    playerElement.textContent = player.name + ": $" + player.chips
 
     console.log(player.chips)
 }
